@@ -1,0 +1,953 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: rgb(23, 23, 23);
+  }
+}
+
+.home{
+  width: 50%;
+  position: relative;
+  top: 30px;
+  bottom: 40px;
+}
+
+.index{
+  width: 100%;
+  display: flex;
+  justify-content:center ;
+}
+.navbar{
+  position: fixed;
+  left: 0;
+  transition: 1.3s ease;
+  top: 60px;
+  width: 200px;
+  height: 100vh;
+}
+
+.chat{
+  width:23%;
+  position: fixed;
+  right: 0;
+  height: 100vh;
+}
+.create-profile{
+  display: grid;
+  flex-wrap: wrap;
+  gap: 6px;
+  width: 100%;
+  justify-content: center;
+
+}
+.create-profile input:nth-child(1){
+ 
+  background-image: url(/person.png);
+  height: 100px;
+  position: relative;
+  left: 120px;
+  top: 30px;
+  padding: 55px;
+  padding-top: 55px;
+ background-size: cover;
+  width: 100px;
+  background-repeat: no-repeat;
+  border: 1px solid;
+  display: flex;
+
+  border-radius: 50%;
+}
+.home-orginal{
+  display: grid;
+  justify-content: center;
+  width: 100%;
+}
+.create-profile p{
+  text-align: center;
+  position: relative;
+  right: 20px;
+}
+.create-profile input{
+  width:400px;
+  background-color: transparent;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid;
+  margin: 10px;
+}
+.create-profile button{
+  width: 400px;
+  background-color: rgb(0, 94, 255);
+  height: 40px;
+  border-radius: 10px;
+}
+
+.storys {
+display: flex;
+justify-content: center;  
+width: 100%;
+height: 117px;
+gap: 10px;
+overflow-x: scroll;
+overflow-y: hidden;
+margin-bottom: 40px;
+position: relative;
+top: 15px;
+text-align: center;
+font-size: small;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+padding-left: 100px;
+
+}
+
+
+
+
+
+.storys::-webkit-scrollbar{
+  display: none;
+}
+.storys img{
+  aspect-ratio: 4/4;
+  object-fit: cover;
+  border-radius: 50%;
+  -webkit-user-drag: none;
+  user-select:none;
+}
+
+.story h2{
+  width: 18px;
+  height: 18px;
+  background-color: green;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: 45px;
+  border: 3px solid   rgb(23, 23, 23);
+
+}
+.story h2:nth-child(4){
+  background-color: yellow;
+
+}
+.story{
+  left: 59px;
+  top: 20px;
+  color: rgb(204, 204, 204);
+  
+  font-size: 3px;
+  position: relative;
+}
+
+.title-post{
+  display: flex;
+  /* position: relative; */
+  justify-content: space-between;
+  background-color: rgb(43, 44, 44);
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+  left: 100px;
+
+}
+.title-post h5{
+  font-size: 2px;
+  font-weight: 200;
+}
+.title-post div{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+}
+.title-post img{
+  object-fit: cover;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.title-post .image-menu{
+  width: 19px;
+  height: 23px;
+  margin-right: 10px;
+}
+
+.cards-post{
+  display: grid;
+  justify-content: center;
+  gap: 40px;
+  
+  
+}
+.card-post{
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
+.card-post .image-post {
+  /* position: relative;
+  left: 100px; */
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.logo-moon{
+  display: flex;
+  z-index: 100;
+  text-align: center;
+  user-select: none;
+  top:   -10px;
+  position: fixed;  
+  width: 39%;
+  gap: 10px;
+  font-size: 20px;
+  color: #0763f6;
+}
+
+
+.borgerr-layout{
+  position: fixed;
+  top: 0px;
+  font-size: 26px;
+  z-index: 1000;
+  display: flex;
+  cursor: pointer;
+  transform: rotate(90deg);
+
+  right:50px;
+}
+
+/* page chat */
+
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  border: 5px solid black;
+  background-color: #1e1c1c;
+  overflow: hidden;
+  border: .5px solid rgb(39, 38, 38);
+  text-align: center;
+  display: none;
+  transition: .3s ease;
+  height: 80vh;
+  padding: 10px;
+  position: fixed;
+  z-index: 20;
+  right: 0;
+  bottom: 0;
+  width: 23%; 
+
+
+}
+.chat-show{
+  display: block;
+
+}
+.chat-ayman{
+}
+
+/* Full-width textarea */
+.form-container input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: #c2c1c1;
+ color: #555;
+  min-height: 40px;
+}
+.chatio{
+  position: absolute;
+  width:100%;
+  bottom: 10px;
+  left: 0px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container input:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #0324fa;
+  color: white;
+  position: absolute;
+  padding: 16px 20px;
+  height: 46px;
+  border: none;
+  cursor: pointer;
+  width: 66px;
+  text-align: center;
+ right: 0;
+  opacity: 0.8;
+}
+
+.chat-title{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  
+  font-size: 10px;
+}
+
+.chat-title .closed{
+  position: absolute;
+  top: -8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px ;
+  color: rgb(255, 255, 255);
+  padding-bottom: 3px;
+  font-weight: 600;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(218, 20, 20, 0.94);
+  font-size: larger;
+  cursor: pointer;
+  left: 7px;
+}
+
+.chat-title .full-screen-chat{
+  position: absolute;
+  top: -8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px ;
+  color: rgb(255, 255, 255);
+  padding-bottom: 3px;
+  font-weight: 600;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(1, 98, 244, 0.94);
+  font-size: larger;
+  cursor: pointer;
+  left: 21px;
+}
+
+.full-screen{
+  width: 45%;
+  height: 100vh;
+  background-color: #1e1c1c;
+
+}
+.full-screen .chat-title{
+  width: 100%;
+  justify-content: space-evenly;
+
+}
+.full-screen .container{
+  width: 97%;
+}
+
+
+
+
+
+.loading-show{
+  
+
+    opacity: 0;
+   display: none; 
+}
+
+.loading-big{
+width: 100%;
+z-index: 1000;
+top: 0;
+height: 100%;
+background: #26272736;
+backdrop-filter: blur(20px);
+position: fixed;
+animation: loading 3s ease;
+overflow-y: hidden;
+
+
+}
+
+
+.loading{
+  position: absolute;
+  text-align: center;
+  left: 45%;
+  top: 30%;
+}
+
+
+.ploading{
+  font-size: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 47.5%;
+}
+
+
+
+
+.chat-title section{
+  display: flex; 
+  gap: 10px;
+  margin-bottom: 0;
+}
+
+.chat-title img{
+  border-radius: 50%;
+  height: 50px;
+  width: 48px;
+  border: .3px solid rgb(0, 98, 255);
+}
+/* Add a red background color to the cancel button */
+
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.nav ul{
+  list-style: none;
+  
+}
+/*  */
+.nav-show{
+  left: -800px;
+}
+.nav ul li{
+  padding-top: 25px;
+  font-weight: 200;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.nav ul li  img{
+  position: relative;
+  top: 6px;
+  right: 12px;
+}
+
+
+.layout{
+  background-color: #b6b9ec13;
+  border-radius: 15px;
+  backdrop-filter: blur(7px);
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 10px;
+  gap: 10px;
+  z-index: 110;
+  position: fixed;
+  right: 43%; 
+ top: 25px;
+}
+.layout img:hover{
+  transform: scale(1.05);
+}
+
+
+/* media query :) */
+@media only screen and (max-width:770px){
+  .navbar{
+    z-index: 100;
+    text-align: center;
+    background-color: rgba(33, 33, 34, 0.438);
+    font-size: 30px;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    top: 0;
+    overflow-y: scroll;
+    text-align: center;
+
+  }
+
+  .profile {
+    
+
+  }
+  .navbar::-webkit-scrollbar{
+    display: none;
+  }
+  .navbar ul{
+    margin-top: 150px;
+  }
+  .loading{
+    left: 0px;
+
+  }
+  .navbar img{
+    display: none;
+  }
+  .navbar ul li{
+    text-align:center ;
+    padding: 10px;
+    width: 100%;
+  }
+  .storys{
+    top: 30px;
+    width: 180%;
+    right: 80px;
+  }
+ 
+ 
+  .form-container{
+    width: 100%;
+    
+    height: 100vh;
+    z-index: 100;
+    background-color: rgb(25, 24, 24);
+  }
+  .layout{
+    justify-content: space-around;
+    width: 100%;
+    left: 0;
+    padding-right: 70px;
+    align-items: center;
+    border-radius: 0;
+    height: 50px;
+    padding-bottom: 8px;
+    top: 95%;
+    background-color: #ffffffe6;
+  }
+  .ploading{
+    left: 36%;
+  }
+  .logo-moon {
+    font-size: medium;
+    width: 30%;
+    position: relative;
+    top:  10px;
+    text-align: center;
+  }
+
+  .home{
+    top: 50px;
+  }
+  .navbar ul li:hover{
+    background-color: rgb(25, 24, 24);
+    background: linear-gradient(to left ,rgb(0, 0, 0) ,rgb(171, 171, 171));
+  }
+  .layout span{
+opacity: 0;   
+
+  }
+  .chat-title{
+    margin-top: 60px;
+    
+  }
+  .chatio {
+    margin-bottom: 40px;
+  }
+  .loading {
+    left: 120px;
+  }
+  .lain-1{
+   display: none;
+  }
+.img-me{
+  left: 66%;
+}
+
+}
+@media only screen and (max-width:280px){
+  .storys{
+right:45px ; 
+   width: 210%;
+  }
+  .i-profile h1{
+    font-size: 10px;
+  }
+
+}
+
+
+
+
+.layout span{
+  width: 7px;
+  height: 7px ;
+  z-index: 5;
+  border-radius: 50%;
+  position: relative;
+  left: 68px;
+  font-size: 2px;
+  text-align: center;
+  top: 2px;
+  background-color: rgb(242, 1, 1);
+}
+
+.layout span p{
+position: relative;
+bottom: 7px;
+font-size: 1px;
+font-weight: 100;
+
+}
+
+
+/* chating with lyali */
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  font-size: 2px;
+  width: 96%;
+  color: #555;
+  height: 53px;
+  padding: 10px;
+  margin: 10px 0;
+  margin-right: 10px;
+  border-radius: 20px;
+  border-bottom-left-radius: 0px;
+  position: relative;
+  text-align: left;
+ 
+
+ 
+}
+ .righter{
+  border-radius: 20px;
+  border-bottom-right-radius: 0px;
+  margin-left: 20px;
+  text-align: right;
+}
+
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background-position: top;
+  margin-right: 20px;
+  border: 2px solid rgba(7, 7, 255, 0.793);
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  width: 37px;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+
+
+/* sniper is loading */
+
+
+.spinner {
+  width: 44px;
+  height: 44px;
+  animation: spinner-y0fdc1 2s infinite ease;
+  transform-style: preserve-3d;
+  position: relative;
+  left: 85px;
+  
+ }
+ 
+ .spinner > div {
+  background-color: rgba(0,77,255,0.2);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  border: 2px solid #004dff;
+ }
+ 
+ .spinner div:nth-of-type(1) {
+  transform: translateZ(-22px) rotateY(180deg);
+ }
+ 
+ .spinner div:nth-of-type(2) {
+  transform: rotateY(-270deg) translateX(50%);
+  transform-origin: top right;
+ }
+ 
+ .spinner div:nth-of-type(3) {
+  transform: rotateY(270deg) translateX(-50%);
+  transform-origin: center left;
+ }
+ 
+ .spinner div:nth-of-type(4) {
+  transform: rotateX(90deg) translateY(-50%);
+  transform-origin: top center;
+ }
+ 
+ .spinner div:nth-of-type(5) {
+  transform: rotateX(-90deg) translateY(50%);
+  transform-origin: bottom center;
+ }
+ 
+ .spinner div:nth-of-type(6) {
+  transform: translateZ(22px);
+ }
+ 
+ @keyframes spinner-y0fdc1 {
+  0% {
+   transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+  }
+ 
+  50% {
+   transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+  }
+ 
+  100% {
+   transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+  }
+ }
+
+
+ /* page profile :) */
+.profile{
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  justify-content: space-between;
+  grid-template-columns: 20px;
+  flex-wrap: wrap;
+}
+ .i-profile h1{
+  width:700px;
+  font-size: 70px;
+  color: rgb(255, 253, 253);
+  position: relative;
+  top: 110px;
+  left: 140px;
+}
+
+.i-profile p{
+  position: absolute;
+  bottom:230px;
+  font-size: large;
+  color: #999;
+  width: 470px;
+  text-align: left;
+  left: 140px;
+}
+
+.i-me{
+  position: relative;
+}
+.lain{
+  position: absolute;
+  top: 375px;
+  left: 310px; 
+}
+
+
+.lain-1{
+  position: absolute;
+  right: 0px;
+  top: 100px;
+}
+
+.img-me{
+  border-radius: 10%;
+  position: relative;
+  right: 100px;
+  bottom: 90px;
+  z-index: 1;
+ 
+}
+
+
+/* new input */
+.form-box {
+  max-width: 300px;
+  background: #f1f7fe;
+  overflow: hidden;
+  border-radius: 16px;
+  color: #010101;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px 24px;
+  gap: 16px;
+  text-align: center;
+}
+
+/*Form text*/
+.title {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+
+/*Inputs box*/
+
+
+.input {
+  background: none;
+  border: 0;
+  outline: 0;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid rgb(12, 12, 12);
+  font-size: .9rem;
+  padding: 8px 15px;
+}
+
+.form-section {
+  padding: 16px;
+  font-size: .85rem;
+  background-color: #e0ecfb;
+  box-shadow: rgb(0 0 0 / 8%) 0 -1px;
+}
+
+.form-section a {
+  font-weight: bold;
+  color: #0066ff;
+  transition: color .3s ease;
+}
+
+.form-section a:hover {
+  color: #005ce6;
+  text-decoration: underline;
+}
+
+/*Button*/
+.form button {
+  background-color: #0066ff;
+  color: #fff;
+  border: 0;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.form button:hover {
+  background-color: #005ce6;
+}
+
+/* section delete */
+.btn-d{
+  width: 70px;
+  height: 30px;
+  background-color: rgb(194, 13, 13);
+  position: relative;
+  left: 30px;
+  border-radius: 10px;
+  color: #010101;
+  cursor:pointer;
+  font-size: 14px;
+}
+.btn-d:hover{
+  background-color: rgb(200, 47, 19);
+
+}
+
+.delete{
+  height: 100px;
+  width: 350px;
+  background-color: #d5cfcfa0;
+  color: #010101;
+  text-align: center;
+  padding-top: 3px;
+  border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 40%;
+  transition: 4s ease;
+  display: none;
+  
+}
+.show-delete{
+  display: block;
+  transition: 3s ease;
+}
+.delete button{
+  width: 80px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.delete button:nth-child(2){
+  background-color: rgb(195, 9, 9);
+  cursor: no-drop;
+  margin-right: 20px;
+  /* border: 1.5px solid black ; */
+  box-shadow: -3px 3px 3px black;  
+}
+.delete button:nth-child(3){
+  box-shadow: 0px 0px 10px black inset, 0px 0px 20px rgba(0, 0, 0, 0.272) inset, 0px 0px 30px rgba(0, 0, 0, 0.272) inset;
+}
+.delete button:nth-child(2):hover{
+  background-color: rgb(202, 25, 25);
+
+}
