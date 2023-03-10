@@ -1,4 +1,5 @@
 import axios from "axios"
+import Link from "next/link"
 import react, { useEffect, useState } from "react"
 
 
@@ -39,34 +40,18 @@ const Login =()=>{
     
     
    return(
-    <div>
+    <div className="login">
        <section className="create-profile">  
-       <div class="form ">
+       <div class="forms ">
     <span class="title">Sign up</span>
     <span class="subtitle">Create a free account with your email.</span></div>
-          <input type="file" name="image" style={{backgroundImage: `url(${Image})` }} id="image" placeholder="Set Image To Profile"  onChange={e=>{setimage(e.target.value.replace('C:\\fakepath\\', ' '))}} /><p>اختار صورة لملفك الشخصي</p> <br/>
+          <input type="file" name="image" style={{backgroundImage: `url(${Image})` }} id="image" placeholder="Set Image To Profile"  onChange={e=>{setimage(e.target.value.replace('C:\\fakepath\\', ' '))}} /> 
             <input type="text"  placeholder="User Name" onChange={e=>{setusername(e.target.value)}}/><br/>
             <input type="text" placeholder="Name" onChange={e=>setname(e.target.value)}/><br/>
             
             <button onClick={login}>Create Account</button>
-       </section>
-
-           
-       <div class="form-box ">
-<div class="form ">
-    <span class="title">Sign up</span>
-    <span class="subtitle">Create a free account with your email.</span>
-    <div class="form-container">
-      <input type="text" class="input" placeholder="Full Name"/>
-			<input type="text" class="input" placeholder="Email"/>
-			<input type="password" class="input" placeholder="Password"/>
-    </div>
-    <button>Sign up</button>
-</div>
-<div class="form-section">
-  <p>Have an account? <a href="">Log in</a> </p>
-</div>
-</div>
+     
+          <Link href="/singin"><p style={{color:"blue",textAlign:"center",}}>Sing in </p></Link>  </section>
             </div>
          
 
