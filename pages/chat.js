@@ -15,7 +15,7 @@ const Chat = () => {
            
         <div  class="form-container" id='chat'>
                   <div className='chat-title'>
-                    <div className='close'><p className='closed ' onClick={handelCloseChat} title='close chat! :('>-</p>
+                    <div className='close'><p className='closed ' onClick={handelCloseChat} title='close chat! :('></p>
                   <p className='full-screen-chat' onClick={fullScreenChat} title='full screen chat! :)'></p>
                     </div>
             
