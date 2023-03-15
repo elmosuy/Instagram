@@ -25,19 +25,19 @@ a {
   }
 }
 
-.home{
+.home {
   width: 50%;
   position: relative;
   top: 30px;
   bottom: 40px;
 }
 
-.index{
+.index {
   width: 100%;
   display: flex;
-  justify-content:center ;
+  justify-content: center;
 }
-.navbar{
+.navbar {
   position: fixed;
   left: 0;
   transition: 1.3s ease;
@@ -46,61 +46,56 @@ a {
   height: 100%;
   z-index: 100;
   left: -800px;
-
 }
 
-.chat{
-  width:23%;
+.chat {
+  width: 23%;
   position: fixed;
   right: 0;
   height: 100vh;
 }
 
-
-.login{
+.login {
   display: flex;
   justify-content: center;
   width: 100%;
   height: 100vh;
   transition: 2s ease;
-  
 }
-.create-post input:nth-child(2){
- 
+.create-post input:nth-child(2) {
   position: absolute;
-  width: 58px; 
-  background-color: #000000; 
+  width: 58px;
+  background-color: #000000;
   height: 20px;
   border-bottom: 0;
-
-
 }
-.home-orginal{
+.home-orginal {
   display: grid;
   justify-content: center;
   width: 100%;
 }
-.create-profile p{
+.create-profile p {
   text-align: center;
   position: relative;
   right: 20px;
 }
-.create-profile input{
-  width:90%;
+.create-profile input {
+  width: 90%;
   background-color: transparent;
   height: 40px;
   border: none;
+  color: #fefefe;
   margin: 10px;
   border-bottom: 1px solid rgb(148, 148, 148);
-  
+}
+.create-profile input::placeholder {
+  color: #ddd;
 }
 
-.create-profile input:focus{
-
+.create-profile input:focus {
   outline: none;
-
 }
-.create-profile button{
+.create-profile button {
   width: 90%;
   background-color: rgb(0, 94, 255);
   height: 40px;
@@ -108,39 +103,35 @@ a {
 }
 
 .storys {
-display: flex;
-justify-content: center;  
-width: 100%;
-height: 117px;
-gap: 10px;
-overflow-x: scroll;
-overflow-y: hidden;
-margin-bottom: 40px;
-position: relative;
-top: 15px;
-text-align: center;
-font-size: small;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-padding-left: 100px;
-
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 117px;
+  gap: 10px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-bottom: 40px;
+  position: relative;
+  top: 15px;
+  text-align: center;
+  font-size: small;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding-left: 100px;
 }
 
-
-
-
-
-.storys::-webkit-scrollbar{
+.storys::-webkit-scrollbar {
   display: none;
 }
-.storys img{
+.storys img {
   aspect-ratio: 4/4;
   object-fit: cover;
   border-radius: 50%;
   -webkit-user-drag: none;
-  user-select:none;
+  user-select: none;
 }
 
-.story h2{
+.story h2 {
   width: 18px;
   height: 18px;
   background-color: green;
@@ -148,23 +139,21 @@ padding-left: 100px;
   position: absolute;
   top: -5px;
   left: 45px;
-  border: 3px solid   rgb(23, 23, 23);
-
+  border: 3px solid rgb(23, 23, 23);
 }
-.story h2:nth-child(4){
+.story h2:nth-child(4) {
   background-color: yellow;
-
 }
-.story{
+.story {
   left: 59px;
   top: 20px;
   color: rgb(204, 204, 204);
-  
+
   font-size: 3px;
   position: relative;
 }
 
-.title-post{
+.title-post {
   display: flex;
   /* position: relative; */
   justify-content: space-between;
@@ -173,38 +162,35 @@ padding-left: 100px;
   height: 50px;
   padding-left: 10px;
   left: 100px;
-
 }
-.title-post h5{
+.title-post h5 {
   font-size: 2px;
   font-weight: 200;
 }
-.title-post div{
+.title-post div {
   display: flex;
   text-align: center;
   align-items: center;
   gap: 10px;
 }
-.title-post img{
+.title-post img {
   object-fit: cover;
   height: 30px;
   width: 30px;
   border-radius: 50%;
 }
-.title-post .image-menu{
+.title-post .image-menu {
   width: 19px;
   height: 23px;
   margin-right: 10px;
 }
 
-.cards-post{
+.cards-post {
   display: grid;
   justify-content: center;
   gap: 40px;
-  
-  
 }
-.card-post{
+.card-post {
   width: 100%;
   display: grid;
   justify-content: center;
@@ -217,33 +203,31 @@ padding-left: 100px;
   object-fit: cover;
 }
 
-.logo-moon{
+.logo-moon {
   display: flex;
   z-index: 100;
   text-align: center;
   user-select: none;
-  top:   -10px;
-  position: fixed;  
+  top: -10px;
+  position: fixed;
   width: 39%;
   gap: 10px;
   font-size: 20px;
   color: #0763f6;
 }
 
-
-.borgerr-layout{
+.borgerr-layout {
   position: fixed;
   top: 0px;
   font-size: 26px;
-  z-index:3002;
+  z-index: 3002;
   display: flex;
   cursor: pointer;
   transform: rotate(90deg);
-  right:50px;
+  right: 50px;
 }
 
 /* page chat */
-
 
 .open-button {
   background-color: #555;
@@ -273,25 +257,21 @@ padding-left: 100px;
   border: 5px solid black;
   background-color: #161515;
   overflow: hidden;
-  border: .5px solid rgb(39, 38, 38);
+  border: 0.5px solid rgb(39, 38, 38);
   text-align: center;
   display: none;
-  transition: .3s ease;
+  transition: 0.3s ease;
   height: 80vh;
   padding: 10px;
   position: fixed;
   z-index: 20;
   right: 0;
   bottom: 0;
-  width: 23%; 
-
-
+  width: 23%;
 }
-.chat-show{
+.chat-show {
   display: block;
-
 }
-
 
 /* Full-width textarea */
 .form-container input {
@@ -299,12 +279,12 @@ padding-left: 100px;
   padding: 15px;
   border: none;
   background: #c2c1c1;
- color: #555;
+  color: #555;
   min-height: 40px;
 }
-.chatio{
+.chatio {
   position: absolute;
-  width:100%;
+  width: 100%;
   bottom: 10px;
   left: 0px;
 }
@@ -326,25 +306,25 @@ padding-left: 100px;
   cursor: pointer;
   width: 66px;
   text-align: center;
- right: 0;
+  right: 0;
   opacity: 0.8;
 }
 
-.chat-title{
+.chat-title {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  
+
   font-size: 10px;
 }
 
-.chat-title .closed{
+.chat-title .closed {
   position: absolute;
   top: -8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 8px ;
+  width: 8px;
   color: rgb(255, 255, 255);
   padding-bottom: 3px;
   font-weight: 600;
@@ -356,13 +336,13 @@ padding-left: 100px;
   left: 5px;
 }
 
-.chat-title .full-screen-chat{
+.chat-title .full-screen-chat {
   position: absolute;
   top: -8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 8px ;
+  width: 8px;
   color: rgb(255, 255, 255);
   padding-bottom: 3px;
   font-weight: 600;
@@ -374,108 +354,91 @@ padding-left: 100px;
   left: 18px;
 }
 
-.full-screen{
+.full-screen {
   width: 45%;
   height: 100vh;
   background-color: #1e1c1c;
-
 }
-.full-screen .chat-title{
+.full-screen .chat-title {
   width: 100%;
   justify-content: space-evenly;
-
 }
-.full-screen .container{
+.full-screen .container {
   width: 97%;
 }
 
-
-
-
-
-.loading-show{
-  
-
-    opacity: 0;
-   display: none; 
+.loading-show {
+  opacity: 0;
+  display: none;
 }
 
-.loading-big{
-width: 100%;
-z-index: 1000;
-top: 0;
-height: 100%;
-background: #26272736;
-backdrop-filter: blur(20px);
-position: fixed;
-animation: loading 3s ease;
-overflow-y: hidden;
-
-
+.loading-big {
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  height: 100%;
+  background: #26272736;
+  backdrop-filter: blur(20px);
+  position: fixed;
+  animation: loading 3s ease;
+  overflow-y: hidden;
 }
 
-
-.loading{
+.loading {
   position: absolute;
   text-align: center;
   left: 45%;
   top: 30%;
 }
 
-
-.ploading{
+.ploading {
   font-size: 5px;
   position: absolute;
   bottom: 0;
   left: 47.5%;
 }
 
-
-
-
-.chat-title section{
-  display: flex; 
+.chat-title section {
+  display: flex;
   gap: 10px;
   margin-bottom: 0;
 }
 
-.chat-title img{
+.chat-title img {
   border-radius: 50%;
   height: 50px;
   width: 48px;
-  border: .3px solid rgb(0, 98, 255);
+  border: 0.3px solid rgb(0, 98, 255);
 }
 /* Add a red background color to the cancel button */
 
-
 /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn:hover,
+.open-button:hover {
   opacity: 1;
 }
 
-.nav ul{
+.nav ul {
   list-style: none;
-  
 }
 /*  */
-.nav-show{
+.nav-show {
   left: 10px;
 }
-.nav ul li{
+.nav ul li {
   padding-top: 25px;
   font-weight: 200;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-
-.nav ul li  img{
+.nav ul li img {
   position: relative;
   top: 6px;
   right: 12px;
 }
 
-
-.layout{
+.layout {
   background-color: #b6b9ec13;
   border-radius: 15px;
   backdrop-filter: blur(7px);
@@ -486,17 +449,16 @@ overflow-y: hidden;
   gap: 10px;
   z-index: 110;
   position: fixed;
-  right: 43%; 
- top: 25px;
+  right: 43%;
+  top: 25px;
 }
-.layout img:hover{
+.layout img:hover {
   transform: scale(1.05);
 }
 
-
 /* media query :) */
-@media only screen and (max-width:770px){
-  .navbar{
+@media only screen and (max-width: 770px) {
+  .navbar {
     z-index: 2000;
     text-align: center;
     background-color: rgba(33, 33, 34, 0.438);
@@ -508,47 +470,45 @@ overflow-y: hidden;
     height: 100%;
     overflow-y: scroll;
     text-align: center;
-
   }
 
-.nav-show{
-  left: 0;
-}
-  .navbar::-webkit-scrollbar{
+  .nav-show {
+    left: 0;
+  }
+  .navbar::-webkit-scrollbar {
     display: none;
   }
-  .navbar ul{
+  .navbar ul {
     margin-top: 150px;
   }
-  .loading{
+  .loading {
     left: 0px;
-
   }
-  .navbar img{
+  .navbar img {
     display: none;
   }
-  .navbar ul li{
-    text-align:center ;
+  .navbar ul li {
+    text-align: center;
     padding: 10px;
     width: 100%;
   }
-  .storys{
+  .storys {
     top: 30px;
     width: 180%;
     right: 80px;
   }
-  .form{
-    top:50px;
+  .form {
+    top: 50px;
   }
- 
-  .form-container{
+
+  .form-container {
     width: 100%;
-    
+
     height: 100vh;
     z-index: 230;
     background-color: rgb(25, 24, 24);
   }
-  .layout{
+  .layout {
     justify-content: space-around;
     width: 100%;
     left: 0;
@@ -561,7 +521,7 @@ overflow-y: hidden;
     background-color: #ffffffe6;
     z-index: 3000;
   }
-  .ploading{
+  .ploading {
     left: 36%;
   }
   .logo-moon {
@@ -569,24 +529,22 @@ overflow-y: hidden;
     width: 30%;
     position: relative;
     z-index: 3000;
-    top:  10px;
+    top: 10px;
     text-align: center;
   }
 
-  .home{
+  .home {
     top: 50px;
   }
-  .navbar ul li:hover{
+  .navbar ul li:hover {
     background-color: rgb(25, 24, 24);
-    background: linear-gradient(to left ,rgb(0, 0, 0) ,rgb(171, 171, 171));
+    background: linear-gradient(to left, rgb(0, 0, 0), rgb(171, 171, 171));
   }
-  .layout span{
-opacity: 0;   
-
+  .layout span {
+    opacity: 0;
   }
-  .chat-title{
+  .chat-title {
     margin-top: 60px;
-    
   }
   .chatio {
     margin-bottom: 40px;
@@ -594,36 +552,30 @@ opacity: 0;
   .loading {
     left: 120px;
   }
-  .lain-1{
-   display: none;
+  .lain-1 {
+    display: none;
   }
-.img-me{
-  left: 66%;
-}
-.create-profile{
-  position: absolute;
-  top: 120px;
-}
-
-}
-@media only screen and (max-width:280px){
-  .storys{
-right:45px ; 
-   width: 210%;
+  .img-me {
+    left: 66%;
   }
-  .i-profile h1{
+  .create-profile {
+    position: absolute;
+    top: 120px;
+  }
+}
+@media only screen and (max-width: 280px) {
+  .storys {
+    right: 45px;
+    width: 210%;
+  }
+  .i-profile h1 {
     font-size: 10px;
   }
-
-
 }
 
-
-
-
-.layout span{
+.layout span {
   width: 7px;
-  height: 7px ;
+  height: 7px;
   z-index: 5;
   border-radius: 50%;
   position: relative;
@@ -634,14 +586,12 @@ right:45px ;
   background-color: rgb(242, 1, 1);
 }
 
-.layout span p{
-position: relative;
-bottom: 7px;
-font-size: 1px;
-font-weight: 100;
-
+.layout span p {
+  position: relative;
+  bottom: 7px;
+  font-size: 1px;
+  font-weight: 100;
 }
-
 
 /* chating with lyali */
 
@@ -660,17 +610,13 @@ font-weight: 100;
   border-bottom-left-radius: 0px;
   position: relative;
   text-align: left;
- 
-
- 
 }
- .righter{
+.righter {
   border-radius: 20px;
   border-bottom-right-radius: 0px;
   margin-left: 20px;
   text-align: right;
 }
-
 
 .darker {
   border-color: #ccc;
@@ -697,7 +643,7 @@ font-weight: 100;
   float: right;
   width: 37px;
   margin-left: 20px;
-  margin-right:0;
+  margin-right: 0;
 }
 
 .time-right {
@@ -710,9 +656,7 @@ font-weight: 100;
   color: #999;
 }
 
-
 /* sniper is loading */
-
 
 .spinner {
   width: 44px;
@@ -721,62 +665,60 @@ font-weight: 100;
   transform-style: preserve-3d;
   position: relative;
   left: 85px;
-  
- }
- 
- .spinner > div {
-  background-color: rgba(0,77,255,0.2);
+}
+
+.spinner > div {
+  background-color: rgba(0, 77, 255, 0.2);
   height: 100%;
   position: absolute;
   width: 100%;
   border: 2px solid #004dff;
- }
- 
- .spinner div:nth-of-type(1) {
+}
+
+.spinner div:nth-of-type(1) {
   transform: translateZ(-22px) rotateY(180deg);
- }
- 
- .spinner div:nth-of-type(2) {
+}
+
+.spinner div:nth-of-type(2) {
   transform: rotateY(-270deg) translateX(50%);
   transform-origin: top right;
- }
- 
- .spinner div:nth-of-type(3) {
+}
+
+.spinner div:nth-of-type(3) {
   transform: rotateY(270deg) translateX(-50%);
   transform-origin: center left;
- }
- 
- .spinner div:nth-of-type(4) {
+}
+
+.spinner div:nth-of-type(4) {
   transform: rotateX(90deg) translateY(-50%);
   transform-origin: top center;
- }
- 
- .spinner div:nth-of-type(5) {
+}
+
+.spinner div:nth-of-type(5) {
   transform: rotateX(-90deg) translateY(50%);
   transform-origin: bottom center;
- }
- 
- .spinner div:nth-of-type(6) {
+}
+
+.spinner div:nth-of-type(6) {
   transform: translateZ(22px);
- }
- 
- @keyframes spinner-y0fdc1 {
+}
+
+@keyframes spinner-y0fdc1 {
   0% {
-   transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+    transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
   }
- 
+
   50% {
-   transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
   }
- 
+
   100% {
-   transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
   }
- }
+}
 
-
- /* page profile :) */
-.profile{
+/* page profile :) */
+.profile {
   display: flex;
   align-items: center;
   z-index: 1;
@@ -784,8 +726,8 @@ font-weight: 100;
   grid-template-columns: 20px;
   flex-wrap: wrap;
 }
- .i-profile h1{
-  width:700px;
+.i-profile h1 {
+  width: 700px;
   font-size: 70px;
   color: rgb(255, 253, 253);
   position: relative;
@@ -793,9 +735,9 @@ font-weight: 100;
   left: 140px;
 }
 
-.i-profile p{
+.i-profile p {
   position: absolute;
-  bottom:230px;
+  bottom: 230px;
   font-size: large;
   color: #999;
   width: 470px;
@@ -803,31 +745,28 @@ font-weight: 100;
   left: 140px;
 }
 
-.i-me{
+.i-me {
   position: relative;
 }
-.lain{
+.lain {
   position: absolute;
   top: 375px;
-  left: 310px; 
+  left: 310px;
 }
 
-
-.lain-1{
+.lain-1 {
   position: absolute;
   right: 0px;
   top: 100px;
 }
 
-.img-me{
+.img-me {
   border-radius: 10%;
   position: relative;
   right: 100px;
   bottom: 90px;
   z-index: 1;
- 
 }
-
 
 /* new input */
 .form-box {
@@ -860,7 +799,6 @@ font-weight: 100;
 
 /*Inputs box*/
 
-
 .input {
   background: none;
   border: 0;
@@ -868,13 +806,13 @@ font-weight: 100;
   height: 40px;
   width: 100%;
   border-bottom: 1px solid rgb(12, 12, 12);
-  font-size: .9rem;
+  font-size: 0.9rem;
   padding: 8px 15px;
 }
 
 .form-section {
   padding: 16px;
-  font-size: .85rem;
+  font-size: 0.85rem;
   background-color: #e0ecfb;
   box-shadow: rgb(0 0 0 / 8%) 0 -1px;
 }
@@ -882,7 +820,7 @@ font-weight: 100;
 .form-section a {
   font-weight: bold;
   color: #0066ff;
-  transition: color .3s ease;
+  transition: color 0.3s ease;
 }
 
 .form-section a:hover {
@@ -900,7 +838,7 @@ font-weight: 100;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color .3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .form button:hover {
@@ -908,7 +846,7 @@ font-weight: 100;
 }
 
 /* section delete */
-.btn-d{
+.btn-d {
   width: 70px;
   height: 30px;
   background-color: rgb(194, 13, 13);
@@ -916,15 +854,14 @@ font-weight: 100;
   left: 30px;
   border-radius: 10px;
   color: #010101;
-  cursor:pointer;
+  cursor: pointer;
   font-size: 14px;
 }
-.btn-d:hover{
+.btn-d:hover {
   background-color: rgb(200, 47, 19);
-
 }
 
-.delete{
+.delete {
   height: 100px;
   width: 350px;
   background-color: #d5cfcfa0;
@@ -937,36 +874,34 @@ font-weight: 100;
   left: 40%;
   transition: 4s ease;
   display: none;
-  
 }
-.show-delete{
+.show-delete {
   display: block;
   transition: 3s ease;
 }
-.delete button{
+.delete button {
   width: 80px;
   height: 25px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
 }
-.delete button:nth-child(2){
+.delete button:nth-child(2) {
   background-color: rgb(195, 9, 9);
   cursor: no-drop;
   margin-right: 20px;
   /* border: 1.5px solid black ; */
-  box-shadow: -3px 3px 3px black;  
+  box-shadow: -3px 3px 3px black;
 }
-.delete button:nth-child(3){
-  box-shadow: 0px 0px 10px black inset, 0px 0px 20px rgba(0, 0, 0, 0.272) inset, 0px 0px 30px rgba(0, 0, 0, 0.272) inset;
+.delete button:nth-child(3) {
+  box-shadow: 0px 0px 10px black inset, 0px 0px 20px rgba(0, 0, 0, 0.272) inset,
+    0px 0px 30px rgba(0, 0, 0, 0.272) inset;
 }
-.delete button:nth-child(2):hover{
+.delete button:nth-child(2):hover {
   background-color: rgb(202, 25, 25);
-
 }
 
 /* form singin Auth */
-
 
 .group {
   position: relative;
@@ -990,12 +925,11 @@ font-weight: 100;
   top: 90px;
   left: 1px;
   height: 450px;
-
 }
 
-.create-profile{
+.create-profile {
   background-color: #010101;
-  position: absolute;  
+  position: absolute;
   display: grid;
   z-index: 100;
   justify-content: center;
@@ -1003,46 +937,42 @@ font-weight: 100;
   height: 450px;
   width: 360px;
   border-radius: 20px;
-  border: .6px solid white;
+  border: 0.6px solid white;
 }
-.show-singin{
- 
+.show-singin {
   animation: singin ease 4s;
 }
-@keyframes singin{
-  0%{
+@keyframes singin {
+  0% {
     transform: translateX(0px);
     z-index: 200;
   }
-  25%{
+  25% {
     transform: translateX(440px);
     z-index: 200;
   }
-  50%{
+  50% {
     z-index: 20;
-    
   }
-  100%{
+  100% {
     transform: translateX(0px);
     z-index: 1;
   }
 }
 
-.show-login{
-transition: 4s ease;
-z-index: 100;
-
+.show-login {
+  transition: 4s ease;
+  z-index: 100;
 }
-
 
 .form h1 {
   padding-bottom: 20px;
   font-size: 30px;
   font-weight: bold;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   color: white;
 }
-.prev{
+.prev {
   font-size: small;
   position: relative;
   text-align: center;
@@ -1050,7 +980,7 @@ z-index: 100;
   color: #0465aa;
   cursor: pointer;
 }
-.form p{
+.form p {
   top: 55px;
 }
 
@@ -1070,7 +1000,7 @@ z-index: 100;
 }
 
 .main-input:focus {
-  outline: .5px saddlebrown;
+  outline: 0.5px saddlebrown;
 }
 
 .lebal-email {
@@ -1124,16 +1054,15 @@ z-index: 100;
   width: 90%;
   border-radius: 10px;
 }
-.forget{
+.forget {
   font-size: small;
   color: #004dff;
   cursor: pointer;
 }
 /* page creat post in my apps */
-.create-post{
-
+.create-post {
   background-color: #f5f2f2;
-  position: absolute;  
+  position: absolute;
   display: grid;
   z-index: 100;
   justify-content: center;
@@ -1142,19 +1071,18 @@ z-index: 100;
   width: 360px;
   border-radius: 20px;
   color: #010101;
-  border: .6px solid white;
+  border: 0.6px solid white;
 }
-.create-post input{
+.create-post input {
   width: 80%;
-  
 }
-.create-post p{
+.create-post p {
   text-align: center;
   position: relative;
   right: 20px;
 }
-.create-post input{
-  width:90%;
+.create-post input {
+  width: 90%;
   background-color: transparent;
   height: 40px;
   border: none;
@@ -1163,26 +1091,24 @@ z-index: 100;
   color: #000000;
   margin: 10px;
   border-bottom: 2px solid rgb(19, 17, 17);
-  
 }
-.create-post input::placeholder{
-    color: black;
-    font-size: medium;
-    font-weight: 600;
-
+.create-post input::placeholder {
+  color: black;
+  font-size: medium;
+  font-weight: 600;
 }
 
-.create-post input:focus{
+.create-post input:focus {
   outline: none;
 }
 
-.create-post button{
+.create-post button {
   width: 90%;
   background-color: rgb(0, 0, 0);
   height: 40px;
   border-radius: 10px;
 }
-.background-post{
+.background-post {
   width: 100%;
   height: 200px;
   border: 1px solid black;
