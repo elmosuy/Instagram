@@ -15,7 +15,7 @@ const Addpost = () => {
     //   if (Username!=""&&Name!=""&&Image!=""){
     const res = await axios.post("http://localhost:4000/profile", jsondata);
 
-    // window.location.href="/"
+    window.location.href="/"
     //    }  else{ console.log("not conect"); }
   };
 

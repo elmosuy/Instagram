@@ -59,9 +59,9 @@ const Profile = () => {
     <div>
       {" "}
       <h1>|</h1>
-      <h1>Hi my Name is {post.Username}</h1>
+    <div> <h3> {post.Username}</h3></div> 
       <img src={post.Image} alt="" />
-      <br />
+    
       <button className="btn-d" onClick={deletepost}>
         Delete
       </button>
